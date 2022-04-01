@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { UpdateTask } from "./UpdateTask";
-import PNavBar from "../../private-layout/PNavBar"
+import PNavBar from "../../private-layout/PNavBar";
 
 function TodoCard({ data, handleEdit, handleDelete }) {
     const { _id, title, classTitle } = data;
@@ -35,7 +35,7 @@ export default function ShowTodoList() {
     useEffect(
         function () {
             axios
-                .get("http://localhost:5000/api/tasks")
+                .get("/api/tasks")
                 .then((res) => {
                     console.log(res.data);
                     setTodo(res.data);
@@ -58,7 +58,7 @@ export default function ShowTodoList() {
     }
 
     function handleDelete(e) {
-        axios.delete(`http://localhost:5000/api/tasks/${e.target.name}`);
+        axios.delete(`/api/tasks/${e.target.name}`);
 
         setTodo((data) => {
             return data.filter((todo) => todo._id !== e.target.name);

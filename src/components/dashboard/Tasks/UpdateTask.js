@@ -14,7 +14,7 @@ export function UpdateTask({ _id, handleClose, handleUpdate }) {
         console.log({ _id }, { data });
 
         axios
-            .put(`http://localhost:5000/api/tasks/${_id}`, data)
+            .put(`/api/tasks/${_id}`, data)
             .then((res) => {
                 setData({ title: "", description: "" });
                 console.log(res.data.message);
