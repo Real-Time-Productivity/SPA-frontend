@@ -110,6 +110,7 @@ export default class PomodoroComp extends Component {
 
   pomSwitch() {
     this.pomRunning = true;
+    this.tempDate = Date.now();
     switch (this.pomLoop) {
       case "work1":
       case "work2":
