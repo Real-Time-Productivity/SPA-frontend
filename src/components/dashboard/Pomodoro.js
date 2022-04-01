@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import PNavBar from '../private-layout/PNavBar'
-import './Pomodoro.css'
+import React, { Component } from "react";
+import PNavBar from "../private-layout/PNavBar";
+import "./Pomodoro.css";
 
 export default class PomodoroComp extends Component {
   constructor(props) {
@@ -116,13 +116,13 @@ export default class PomodoroComp extends Component {
       case "work3":
       case "work4":
         this.setState({ workBreak: "Work" });
-        this.startPomodoro(1 / 12, this.pom10Ms);
+        this.startPomodoro(25, this.pom10Ms);
         break;
       case "break1":
       case "break2":
       case "break3":
         this.setState({ workBreak: "Break" });
-        this.startPomodoro(1 / 6, this.pom10Ms);
+        this.startPomodoro(5, this.pom10Ms);
         break;
       case "break4":
         this.setState({ workBreak: "Break" });
