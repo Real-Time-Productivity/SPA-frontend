@@ -1,0 +1,9 @@
+.PomodoroData {
+    display: flex;
+    flex-direction: row;
+}
+
+.PomodoroSpan {
+    width: 50%;
+    text-align: center;
+}
