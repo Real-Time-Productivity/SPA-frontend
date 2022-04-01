@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import PNavBar from "../private-layout/PNavBar";
 import { logoutUser } from "../../actions/authActions";
-import axios from "axios";
 
 class Profile extends Component {
     render() {

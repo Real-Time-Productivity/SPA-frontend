@@ -11,9 +11,6 @@ class PNavBar extends Component {
     };
 
     render() {
-        const { user } = this.props.auth;
-        console.log(this.props.auth);
-
         return (
             <nav>
                 <div className="nav-wrapper">
@@ -38,7 +35,7 @@ class PNavBar extends Component {
                             <a href="sass.html">Sass</a>
                         </li>
                         <li>
-                        <Link to="/pomodoro" className="">
+                            <Link to="/pomodoro" className="">
                                 <span
                                     style={{
                                         display: "flex",
