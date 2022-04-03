@@ -26,60 +26,6 @@ class PNavBar extends Component {
                     </Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         <li>
-                            <a href="sass.html">Sass</a>
-                        </li>
-                        <li>
-                            <a href="sass.html">Sass</a>
-                        </li>
-                        <li>
-                            <a href="sass.html">Sass</a>
-                        </li>
-                        <li>
-                            <Link to="/pomodoro" className="">
-                                <span
-                                    style={{
-                                        display: "flex",
-                                        justifycontent: "space-between",
-                                    }}
-                                >
-                                    <i className="material-icons">task</i>
-                                    <h5 className="valign-wrapper" style={{ margin: "0 0 0 5px" }}>
-                                        Pomodoro
-                                    </h5>
-                                </span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/tasks" className="">
-                                <span
-                                    style={{
-                                        display: "flex",
-                                        justifycontent: "space-between",
-                                    }}
-                                >
-                                    <i className="material-icons">task</i>
-                                    <h5 className="valign-wrapper" style={{ margin: "0 0 0 5px" }}>
-                                        Task List
-                                    </h5>
-                                </span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/profile" className="">
-                                <span
-                                    style={{
-                                        display: "flex",
-                                        justifycontent: "space-between",
-                                    }}
-                                >
-                                    <i className="material-icons">person</i>
-                                    <h5 className="valign-wrapper" style={{ margin: "0 0 0 5px" }}>
-                                        Profile
-                                    </h5>
-                                </span>
-                            </Link>
-                        </li>
-                        <li>
                             <button
                                 style={{
                                     width: "125px",
