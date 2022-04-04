@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import "./Landing.css";
 
 class Landing extends Component {
     render() {
         return (
             <>
-                <Navbar />
+                <Navbar className="Navbar-Header" />
                 <div style={{ height: "75vh" }} className="container valign-wrapper">
                     <div className="row">
                         <div className="col s12 center-align">
@@ -18,33 +19,37 @@ class Landing extends Component {
                             </p>
                             <p className="flow-text grey-text text-darken-1">Register or sign in below to continue to the application!</p>
                             <br />
-                            <div className="col s6">
-                                <Link
-                                    to="/register"
-                                    style={{
-                                        width: "200px",
-                                        borderRadius: "5px",
-                                        letterSpacing: "4px",
-                                        fontSize: "22px",
-                                    }}
-                                    className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                                >
-                                    Register
-                                </Link>
-                            </div>
-                            <div className="col s6">
-                                <Link
-                                    to="/login"
-                                    style={{
-                                        width: "200px",
-                                        borderRadius: "5px",
-                                        letterSpacing: "4px",
-                                        fontSize: "22px",
-                                    }}
-                                    className="btn btn-large waves-effect waves-light hoverable grey accent-3"
-                                >
-                                    Log In
-                                </Link>
+                            <div className="Landing-Buttons center-align">
+                                <div className="col s12 m6">
+                                    <Link
+                                        to="/register"
+                                        style={{
+                                            width: "200px",
+                                            borderRadius: "5px",
+                                            letterSpacing: "4px",
+                                            fontSize: "22px",
+                                            margin: "10px",
+                                        }}
+                                        className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                                    >
+                                        Register
+                                    </Link>
+                                </div>
+                                <div className="col s12 m6">
+                                    <Link
+                                        to="/login"
+                                        style={{
+                                            width: "200px",
+                                            borderRadius: "5px",
+                                            letterSpacing: "4px",
+                                            fontSize: "22px",
+                                            margin: "10px",
+                                        }}
+                                        className="btn btn-large waves-effect waves-light hoverable grey accent-3"
+                                    >
+                                        Log In
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>

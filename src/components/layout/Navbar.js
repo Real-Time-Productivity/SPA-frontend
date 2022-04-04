@@ -12,9 +12,9 @@ class Navbar extends Component {
                             style={{
                                 fontFamily: "monospace",
                             }}
-                            className="col s5 brand-logo center black-text"
+                            className="col s5 brand-logo center black-text Navbar-Header"
                         >
-                            <i className="material-icons">rocket_launch</i>
+                            <i className="material-icons Navbar-Icon">rocket_launch</i>
                             Real Time Productity
                         </Link>
                     </div>
