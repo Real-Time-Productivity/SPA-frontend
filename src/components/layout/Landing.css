@@ -6,13 +6,9 @@
     }
 
     .Navbar-Header {
-        font-size: 20px !important;
+        font-size: 12px !important;
         width: 100% !important;
         letter-spacing: 4px;
-    }
-
-    .Navbar-Icon {
-        margin: 0px 15px 0px 15px !important;
     }
 }
 

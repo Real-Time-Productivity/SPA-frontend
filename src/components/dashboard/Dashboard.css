@@ -1,0 +1,27 @@
+@media only screen and (max-width: 1023px) {
+    .Dashboard-Content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Dashboard-Nav {
+        font-size: 15px !important;
+        width: 100% !important;
+        letter-spacing: 1px;
+        text-align: left;
+    }
+
+    .Dashboard-Header {
+        font-size: 20px;
+    }
+
+    .Dashboard-NavIcon {
+        margin: 0px 15px 0px 15px !important;
+        width: 56px !important;
+    }
+    
+    .Navbar-Icon {
+        margin: 0px 15px 0px 15px !important;
+    }
+}
+

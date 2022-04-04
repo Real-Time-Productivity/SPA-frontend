@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import PNavBar from "../private-layout/PNavBar";
+import "./Dashboard.css";
 
 class Dashboard extends Component {
     constructor(props) {
@@ -12,6 +13,7 @@ class Dashboard extends Component {
             minutes: 0,
             workBreak: "Work",
             startButton: "Start",
+            width: window.innerWidth,
         };
         this.tenMs = 25 * 6000;
         this.pomLoop = "work1";
@@ -146,14 +148,14 @@ class Dashboard extends Component {
 
         return (
             <>
-                <PNavBar />
-                <div style={{ height: "75vh" }} className="container valign-wrapper">
-                    <div className="row" style={{ marginTop: "150px" }}>
-                        <div className="landing-copy col s6">
-                            <h4>
+                <PNavBar className="Dashboard-Nav" />
+                <div style={{}} className="container">
+                    <div className="row Dashboard-Content">
+                        <div className=" col s12 m6">
+                            <h4 className="Dashboard-Header" style={this.state.width < 1023 ? { textAlign: "center" } : {}}>
                                 <b>Hello,</b> {user.name.split(" ")[0]}
                             </h4>
-                            <h4>
+                            <>
                                 <p className="flow-text grey-text text-darken-1">
                                     Welcome to Real Time Productivity, a high schooler's attempt to fix a high school problem. We tasked ourselves
                                     with trying to solve high schooler's lack of productivity. We, as high schoolers, suffer from this aswell and are
@@ -165,45 +167,51 @@ class Dashboard extends Component {
                                     continued use of the application. These will be added at a later time, at this stage of testing, this is all that
                                     is needed.
                                 </p>
-                                <button
-                                    style={{
-                                        width: "150px",
-                                        borderRadius: "3px",
-                                        letterSpacing: "1.5px",
-                                        margin: "10px",
-                                    }}
-                                    onClick={this.pomSwitch}
-                                    className="btn btn-medium waves-effect waves-light hoverable blue accent-3 center-wrapper"
-                                >
-                                    {this.state.startButton}
-                                </button>
-                                <button
-                                    style={{
-                                        width: "150px",
-                                        borderRadius: "3px",
-                                        letterSpacing: "1.5px",
-                                        margin: "10px",
-                                    }}
-                                    onClick={this.pausePomodoro}
-                                    className="btn btn-medium waves-effect waves-light hoverable blue accent-3 center-wrapper"
-                                >
-                                    Pause
-                                </button>
-                                <button
-                                    style={{
-                                        width: "150px",
-                                        borderRadius: "3px",
-                                        letterSpacing: "1.5px",
-                                        margin: "10px",
-                                    }}
-                                    onClick={this.clearPomodoro}
-                                    className="btn btn-medium waves-effect waves-light hoverable blue accent-3 center-wrapper"
-                                >
-                                    Clear
-                                </button>
-                            </h4>
+                                {this.state.width > 1023 ? (
+                                    <>
+                                        <button
+                                            style={{
+                                                width: "150px",
+                                                borderRadius: "3px",
+                                                letterSpacing: "1.5px",
+                                                margin: "10px",
+                                            }}
+                                            onClick={this.pomSwitch}
+                                            className="btn btn-medium waves-effect waves-light hoverable blue accent-3 center-wrapper"
+                                        >
+                                            {this.state.startButton}
+                                        </button>
+                                        <button
+                                            style={{
+                                                width: "150px",
+                                                borderRadius: "3px",
+                                                letterSpacing: "1.5px",
+                                                margin: "10px",
+                                            }}
+                                            onClick={this.pausePomodoro}
+                                            className="btn btn-medium waves-effect waves-light hoverable blue accent-3 center-wrapper"
+                                        >
+                                            Pause
+                                        </button>
+                                        <button
+                                            style={{
+                                                width: "150px",
+                                                borderRadius: "3px",
+                                                letterSpacing: "1.5px",
+                                                margin: "10px",
+                                            }}
+                                            onClick={this.clearPomodoro}
+                                            className="btn btn-medium waves-effect waves-light hoverable blue accent-3 center-wrapper"
+                                        >
+                                            Clear
+                                        </button>
+                                    </>
+                                ) : (
+                                    <></>
+                                )}
+                            </>
                         </div>
-                        <div className="landing-copy col s6">
+                        <div className="landing-copy col s12 m6">
                             <p className="flow-text grey-text text-darken-1">
                                 The Pomodoro Method has been scientifically proven to improve productivity by allowing users to regularly take breaks
                                 and relax their minds. It is encouraged to break down larger projects and work on separate aspects each loop. Every
@@ -214,14 +222,68 @@ class Dashboard extends Component {
                                 Notice: It is recommended to keep this tab full screen in another window in order to keep the timer moving while using
                                 other programs, other programs won't be able to be full screen.
                             </p>
-                            <div className="PomodoroSpan center-align">
-                                <div className="Pomodoro-div m-3">
-                                    <h1 id="workBreakDisplay">{this.state.workBreak}</h1>
-                                    <h1 id="time" style={{ fontSize: 50 + "px" }}>
-                                        {this.padLeadingZeros(this.state.minutes, 2)} : {this.padLeadingZeros(this.state.seconds, 2)}
-                                    </h1>
-                                </div>
-                            </div>
+                            {this.state.width < 1023 ? (
+                                <>
+                                    <div className="center-align">
+                                        <button
+                                            style={{
+                                                width: "100px",
+                                                borderRadius: "3px",
+                                                letterSpacing: "1.5px",
+                                                margin: "10px",
+                                            }}
+                                            onClick={this.pomSwitch}
+                                            className="btn btn-medium waves-effect waves-light hoverable blue accent-3 center-wrapper"
+                                        >
+                                            {this.state.startButton}
+                                        </button>
+                                        <button
+                                            style={{
+                                                width: "110px",
+                                                borderRadius: "3px",
+                                                letterSpacing: "1.5px",
+                                                margin: "10px",
+                                            }}
+                                            onClick={this.pausePomodoro}
+                                            className="btn btn-medium waves-effect waves-light hoverable blue accent-3 center-wrapper"
+                                        >
+                                            Pause
+                                        </button>
+                                        <button
+                                            style={{
+                                                width: "110px",
+                                                borderRadius: "3px",
+                                                letterSpacing: "1.5px",
+                                                margin: "10px",
+                                            }}
+                                            onClick={this.clearPomodoro}
+                                            className="btn btn-medium waves-effect waves-light hoverable blue accent-3 center-wrapper"
+                                        >
+                                            Clear
+                                        </button>
+                                    </div>
+
+                                    <div className="PomodoroSpan center-align">
+                                        <div className="Pomodoro-div m-3">
+                                            <h1 id="workBreakDisplay">{this.state.workBreak}</h1>
+                                            <h1 id="time" style={{ fontSize: 50 + "px" }}>
+                                                {this.padLeadingZeros(this.state.minutes, 2)} : {this.padLeadingZeros(this.state.seconds, 2)}
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </>
+                            ) : (
+                                <>
+                                    <div className="PomodoroSpan center-align">
+                                        <div className="Pomodoro-div m-3">
+                                            <h1 id="workBreakDisplay">{this.state.workBreak}</h1>
+                                            <h1 id="time" style={{ fontSize: 50 + "px" }}>
+                                                {this.padLeadingZeros(this.state.minutes, 2)} : {this.padLeadingZeros(this.state.seconds, 2)}
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </>
+                            )}
                         </div>
                     </div>
                 </div>

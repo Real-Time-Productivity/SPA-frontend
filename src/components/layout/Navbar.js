@@ -11,6 +11,8 @@ class Navbar extends Component {
                             to="/"
                             style={{
                                 fontFamily: "monospace",
+                                display: "flex",
+                                flexDirection: "row",
                             }}
                             className="col s5 brand-logo center black-text Navbar-Header"
                         >

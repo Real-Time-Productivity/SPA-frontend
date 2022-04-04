@@ -7,7 +7,7 @@ class Landing extends Component {
     render() {
         return (
             <>
-                <Navbar className="Navbar-Header" />
+                <Navbar className="Navbar-Header center-align" />
                 <div style={{ height: "75vh" }} className="container valign-wrapper">
                     <div className="row">
                         <div className="col s12 center-align">

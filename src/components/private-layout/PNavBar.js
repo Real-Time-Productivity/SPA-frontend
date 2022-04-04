@@ -3,8 +3,15 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import { Link } from "react-router-dom";
+import "./PNavbar.css";
 
 class PNavBar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            width: window.innerWidth,
+        };
+    }
     onLogoutClick = (e) => {
         e.preventDefault();
         this.props.logoutUser();
@@ -12,20 +19,33 @@ class PNavBar extends Component {
 
     render() {
         return (
-            <nav>
-                <div className="nav-wrapper">
-                    <Link
-                        to="/dashboard"
-                        style={{
-                            fontFamily: "monospace",
-                        }}
-                        className="col s5 brand-logo white-text"
-                    >
-                        <i className="material-icons">rocket_launch</i>
-                        Real Time Productity
-                    </Link>
-                    <ul id="nav-mobile" className="right hide-on-med-and-down">
-                        <li>
+            <nav className="">
+                <div className="nav-wrapper ">
+                    {this.state.width < 1023 ? (
+                        <>
+                            <Link
+                                to="/dashboard"
+                                style={{
+                                    fontFamily: "monospace",
+                                }}
+                                className="col s8 brand-logo white-text Dashboard-Nav"
+                            >
+                                <i className="material-icons Dashboard-NavIcon">rocket_launch</i>
+                                Real Time Productity
+                            </Link>
+                        </>
+                    ) : (
+                        <>
+                            <Link
+                                to="/dashboard"
+                                style={{
+                                    fontFamily: "monospace",
+                                }}
+                                className="col s8 brand-logo white-text Dashboard-Nav"
+                            >
+                                <i className="material-icons Dashboard-NavIcon">rocket_launch</i>
+                                Real Time Productity
+                            </Link>
                             <button
                                 style={{
                                     width: "125px",
@@ -35,12 +55,12 @@ class PNavBar extends Component {
                                     padding: "",
                                 }}
                                 onClick={this.onLogoutClick}
-                                className="btn btn-medium waves-effect waves-light hoverable white accent-6 center black-text"
+                                className="btn btn-medium waves-effect waves-light hoverable white accent-6 center black-text s4"
                             >
                                 Logout
                             </button>
-                        </li>
-                    </ul>
+                        </>
+                    )}
                 </div>
             </nav>
         );
