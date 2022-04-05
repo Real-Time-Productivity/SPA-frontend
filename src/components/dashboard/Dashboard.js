@@ -156,7 +156,7 @@ class Dashboard extends Component {
                             <h5>
                                 <p className="flow-text grey-text text-darken-1">
                                     Welcome to Real Time Productivity, a high schooler's attempt to fix a high school problem. We tasked ourselves
-                                    with trying to solve high schooler's lack of productivity. We, as high schoolers, suffer from this aswell and are
+                                    with trying to solve high schooler's lack of productivity. We, as high schoolers, suffer from this as well and are
                                     attempting to devise a solution in order to help you too. In this preliminary alpha version of the program, we
                                     want to utilize the Pomodoro Method as the most important thing of the program.
                                 </p>
