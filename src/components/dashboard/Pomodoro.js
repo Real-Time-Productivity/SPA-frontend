@@ -203,11 +203,6 @@ export default class PomodoroComp extends Component {
               It is recommended to ignore outside temptations while using the
               Pomodoro Method.
             </h4>
-            <p>
-              Notice: It is recommended to keep this tab full screen in another
-              window in order to keep the timer moving while using other
-              programs, other programs won't be able to be full screen.
-            </p>
           </div>
         </div>
       </>
