@@ -33,6 +33,36 @@ class PNavBar extends Component {
                                 <i className="material-icons Dashboard-NavIcon">rocket_launch</i>
                                 Real Time Productity
                             </Link>
+                            <button
+                                style={{
+                                    width: "40px",
+                                    height: "40px",
+                                    borderRadius: "7.5px",
+                                    margin: "3px",
+                                    right: "5px",
+                                    top: "5px",
+                                    position: "absolute",
+                                    // marginLeft: "92%",
+                                    padding: "0",
+                                }}
+                                onClick={this.onLogoutClick}
+                                className="btn btn-medium waves-effect waves-light hoverable white accent-6 center black-text s3"
+                            >
+                                <i
+                                    className="material-icons"
+                                    style={{
+                                        height: "30px",
+                                        width: "30px",
+                                        fontSize: "30px",
+                                        top: "-8px",
+                                        left: "7px",
+                                        position: "absolute",
+                                        margin: "0px",
+                                    }}
+                                >
+                                    logout
+                                </i>
+                            </button>
                         </>
                     ) : (
                         <>
@@ -40,8 +70,9 @@ class PNavBar extends Component {
                                 to="/dashboard"
                                 style={{
                                     fontFamily: "monospace",
+                                    marginLeft: "15px",
                                 }}
-                                className="col s8 brand-logo white-text Dashboard-Nav"
+                                className="col s9 brand-logo white-text Dashboard-Nav"
                             >
                                 <i className="material-icons Dashboard-NavIcon">rocket_launch</i>
                                 Real Time Productity
@@ -52,10 +83,14 @@ class PNavBar extends Component {
                                     borderRadius: "7.5px",
                                     letterSpacing: "5px",
                                     margin: "5px",
+                                    right: "10px",
+                                    top: "10px",
+                                    position: "absolute",
+                                    // marginLeft: "92%",
                                     padding: "",
                                 }}
                                 onClick={this.onLogoutClick}
-                                className="btn btn-medium waves-effect waves-light hoverable white accent-6 center black-text s4"
+                                className="btn btn-medium waves-effect waves-light hoverable white accent-6 center black-text s3"
                             >
                                 Logout
                             </button>

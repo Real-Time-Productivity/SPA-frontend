@@ -8,7 +8,6 @@
         font-size: 15px !important;
         width: 100% !important;
         letter-spacing: 1px;
-        text-align: left;
     }
 
     .Dashboard-Header {
@@ -23,5 +22,8 @@
     .Navbar-Icon {
         margin: 0px 15px 0px 15px !important;
     }
-}
 
+    .PomodoroSpan {
+        margin-bottom: 75px;
+    }
+}
