@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import PNavBar from "../private-layout/PNavBar";
 import "./Dashboard.css";
+import PFooter from "../private-layout/PFooter";
 
 class Dashboard extends Component {
     constructor(props) {
@@ -147,7 +148,7 @@ class Dashboard extends Component {
         const { user } = this.props.auth;
 
         return (
-            <>
+            <main>
                 <PNavBar className="Dashboard-Nav" />
                 <div style={{}} className="container">
                     <div className="row Dashboard-Content">
@@ -292,7 +293,8 @@ class Dashboard extends Component {
                         </div>
                     </div>
                 </div>
-            </>
+                <PFooter />
+            </main>
         );
     }
 }

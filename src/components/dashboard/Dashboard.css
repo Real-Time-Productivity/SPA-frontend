@@ -22,5 +22,8 @@
     .Navbar-Icon {
         margin: 0px 15px 0px 15px !important;
     }
-}
 
+    .PomodoroSpan {
+        margin-bottom: 75px;
+    }
+}
