@@ -149,11 +149,11 @@ class Dashboard extends Component {
                 <PNavBar />
                 <div style={{ height: "75vh" }} className="container valign-wrapper">
                     <div className="row" style={{ marginTop: "150px" }}>
-                        <h4>
-                            <b>Hello,</b> {user.name.split(" ")[0]}
-                        </h4>
                         <div className="landing-copy col s6">
-                            <h5>
+                            <h4>
+                                <b>Hello,</b> {user.name.split(" ")[0]}
+                            </h4>
+                            <h4>
                                 <p className="flow-text grey-text text-darken-1">
                                     Welcome to Real Time Productivity, a high schooler's attempt to fix a high school problem. We tasked ourselves
                                     with trying to solve high schooler's lack of productivity. We, as high schoolers, suffer from this as well and are
@@ -170,7 +170,7 @@ class Dashboard extends Component {
                                         width: "150px",
                                         borderRadius: "3px",
                                         letterSpacing: "1.5px",
-                                        margin: "5px",
+                                        margin: "10px",
                                     }}
                                     onClick={this.pomSwitch}
                                     className="btn btn-medium waves-effect waves-light hoverable blue accent-3 center-wrapper"
@@ -182,7 +182,7 @@ class Dashboard extends Component {
                                         width: "150px",
                                         borderRadius: "3px",
                                         letterSpacing: "1.5px",
-                                        margin: "5px",
+                                        margin: "10px",
                                     }}
                                     onClick={this.pausePomodoro}
                                     className="btn btn-medium waves-effect waves-light hoverable blue accent-3 center-wrapper"
@@ -194,26 +194,26 @@ class Dashboard extends Component {
                                         width: "150px",
                                         borderRadius: "3px",
                                         letterSpacing: "1.5px",
-                                        margin: "5px",
+                                        margin: "10px",
                                     }}
                                     onClick={this.clearPomodoro}
                                     className="btn btn-medium waves-effect waves-light hoverable blue accent-3 center-wrapper"
                                 >
                                     Clear
                                 </button>
-                            </h5>
+                            </h4>
                         </div>
                         <div className="landing-copy col s6">
-                            <h5 className="flow-text grey-text text-darken-1">
+                            <p className="flow-text grey-text text-darken-1">
                                 The Pomodoro Method has been scientifically proven to improve productivity by allowing users to regularly take breaks
                                 and relax their minds. It is encouraged to break down larger projects and work on separate aspects each loop. Every
                                 4th break is extended in order to give the user a reward for hard work. <br />
                                 It is recommended to ignore outside temptations while using the Pomodoro Method.
-                            </h5>
-                            <h5 className="flow-text grey-text text-darken-1">
+                            </p>
+                            <p className="flow-text grey-text text-darken-1">
                                 Notice: It is recommended to keep this tab full screen in another window in order to keep the timer moving while using
                                 other programs, other programs won't be able to be full screen.
-                            </h5>
+                            </p>
                             <div className="PomodoroSpan center-align">
                                 <div className="Pomodoro-div m-3">
                                     <h1 id="workBreakDisplay">{this.state.workBreak}</h1>
