@@ -14,7 +14,7 @@ import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import Profile from "./components/dashboard/Profile";
 import ShowTaskList from "./components/dashboard/Tasks/TaskList";
-import CreateTask from "./components/dashboard/Tasks/CreateTask";
+import CreateTodo from "./components/dashboard/Tasks/CreateTask";
 
 import "./App.css";
 import PomodoroComp from "./components/dashboard/Pomodoro";
@@ -51,7 +51,7 @@ class App extends Component {
                             <PrivateRoute exact path="/dashboard" component={Dashboard} />
                             <PrivateRoute exact path="/profile" component={Profile} />
                             <PrivateRoute exact path="/tasks" component={ShowTaskList} />
-                            <PrivateRoute exact path="/create-todo" component={CreateTask} />
+                            <PrivateRoute exact path="/create-todo" component={CreateTodo} />
                             <PrivateRoute exact path="/pomodoro" component={PomodoroComp} />
                         </Switch>
                     </div>
