@@ -14,6 +14,7 @@ class Dashboard extends Component {
       minutes: 0,
       workBreak: "Work",
       startButton: "Start",
+      width: window.innerWidth,
     };
     this.ms = 25 * 60000;
     this.pomLoop = "work1";
