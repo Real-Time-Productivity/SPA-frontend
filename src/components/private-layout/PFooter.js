@@ -37,7 +37,7 @@ export default class PFooter extends Component {
                         }}
                     >
                         <Link to='/tipsandtricks' className='brand-logo white-text Dashboard-Nav'>
-                            Real Time Productity
+                            Tips and Tricks
                         </Link>
                     </div>
                 </div>
