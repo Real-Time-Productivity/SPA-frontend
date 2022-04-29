@@ -92,13 +92,13 @@ export default class PomodoroComp extends Component {
       case "work3":
       case "work4":
         this.setState({ workBreak: "Work" });
-        this.startPomodoro(0.2, this.pomMs);
+        this.startPomodoro(25, this.pomMs);
         break;
       case "break1":
       case "break2":
       case "break3":
         this.setState({ workBreak: "Break" });
-        this.startPomodoro(0.1, this.pomMs);
+        this.startPomodoro(5, this.pomMs);
         break;
       case "break4":
         this.setState({ workBreak: "Break" });
