@@ -207,12 +207,6 @@ class Dashboard extends Component {
                   It is recommended to ignore outside temptations while using
                   the Pomodoro Method.
                 </p>
-                <p className="flow-text grey-text text-darken-1">
-                  Notice: It is recommended to keep this tab full screen in
-                  another window in order to keep the timer moving while using
-                  other programs, other programs won't be able to be full
-                  screen.
-                </p>
               </h5>
 
               {this.state.width < 1023 ? (
