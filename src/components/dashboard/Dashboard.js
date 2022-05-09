@@ -33,13 +33,13 @@ class Dashboard extends Component {
 
   async startPomodoro(min, timeElapsed) {
     //Changes Start Button Display
-    this.setState({ startButton: "Start" });
-    //Sets time needed to go through loop
-    this.ms = min * 60000 - timeElapsed;
-    let startTime = Date.now();
-    this.pomRunning = true;
-    console.log("run");
     if (!this.running) {
+      this.setState({ startButton: "Start" });
+      //Sets time needed to go through loop
+      this.ms = min * 60000 - timeElapsed;
+      let startTime = Date.now();
+      this.pomRunning = true;
+      console.log("run");
       this.running = true;
       while (Date.now() - startTime < this.ms && this.pomRunning) {
         await this.countSec();
@@ -50,21 +50,22 @@ class Dashboard extends Component {
         this.setState({ seconds: seconds % 60 });
       }
       this.running = false;
-    }
-    this.pomMs = Date.now() - startTime;
 
-    if (this.pomRunning) {
-      this.pomMs = 0;
-      if (this.pomLoop[0] === "w") {
-        this.pomLoop = "break" + this.pomLoop[4];
-      } else if (this.pomLoop === "break4") {
-        this.pomLoop = "work1";
-      } else {
-        this.pomLoop = "work" + (Number(this.pomLoop[5]) + 1);
+      this.pomMs = Date.now() - startTime;
+
+      if (this.pomRunning) {
+        this.pomMs = 0;
+        if (this.pomLoop[0] === "w") {
+          this.pomLoop = "break" + this.pomLoop[4];
+        } else if (this.pomLoop === "break4") {
+          this.pomLoop = "work1";
+        } else {
+          this.pomLoop = "work" + (Number(this.pomLoop[5]) + 1);
+        }
+        //Progress to next loop
+        // new Audio("../ding-ding-sound-effect.mp3").play();
+        this.pomSwitch();
       }
-      //Progress to next loop
-      // new Audio("../ding-ding-sound-effect.mp3").play();
-      this.pomSwitch();
     }
   }
 
