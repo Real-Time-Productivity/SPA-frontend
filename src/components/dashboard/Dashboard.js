@@ -35,6 +35,7 @@ class Dashboard extends Component {
     //Changes Start Button Display
     this.setState({ startButton: "Start" });
     //Sets time needed to go through loop
+    timeElapsed += Date.now() - this.startTime;
     this.ms = min * 60000 - timeElapsed;
     this.startTime = Date.now();
     this.pomRunning = true;
