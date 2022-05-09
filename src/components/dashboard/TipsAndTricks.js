@@ -34,19 +34,27 @@ class TipsAndTricks extends Component {
             </h4>
             <div className=" col s12 m6">
               <h5>
-                <p className="flow-text grey-text text-darken-1">
-                  While using the Pomodoro Method, make sure to avoid any
-                  outside distractions. One of the primary concepts in the
-                  Pomodoro Method is avoiding distractions during your work
-                  period. <br /> It can be helpful to break down larger tasks
-                  into subtasks that are more manageable. This can make tasks
-                  less daunting and allow you to work more efficiently. <br />{" "}
-                  Students on average perform better in logical classes such as
-                  math and engineering in the morning and better at analytical
-                  classes such as languages and social sciences in the
-                  afternoon. Using this to make a schedule can help
-                  significantly in the learning process.
-                </p>
+                <ul className="flow-text grey-text text-darken-1">
+                  <li>
+                    While using the Pomodoro Method, make sure to avoid any
+                    outside distractions. One of the primary concepts in the
+                    Pomodoro Method is avoiding distractions during your work
+                    period.{" "}
+                  </li>
+                  <li>
+                    {" "}
+                    It can be helpful to break down larger tasks into subtasks
+                    that are more manageable. This can make tasks less daunting
+                    and allow you to work more efficiently.{" "}
+                  </li>
+                  <li>
+                    Students on average perform better in logical classes such
+                    as math and engineering in the morning and better at
+                    analytical classes such as languages and social sciences in
+                    the afternoon. Using this to make a schedule can help
+                    significantly in the learning process.
+                  </li>
+                </ul>
               </h5>
             </div>
             <div className="landing-copy col s12 m6">
