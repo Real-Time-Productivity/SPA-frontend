@@ -21,6 +21,7 @@ class Dashboard extends Component {
     this.pomRunning = true;
     this.pomodoroInterval = null;
     this.pomMs = 0;
+    this.startTime = 0;
     this.startPomodoro = this.startPomodoro.bind(this);
     this.clearPomodoro = this.clearPomodoro.bind(this);
     this.pausePomodoro = this.pausePomodoro.bind(this);
@@ -35,20 +36,21 @@ class Dashboard extends Component {
     this.setState({ startButton: "Start" });
     //Sets time needed to go through loop
     this.ms = min * 60000 - timeElapsed;
-    let startTime = Date.now();
+    this.startTime = Date.now();
     this.pomRunning = true;
     console.log("run");
 
     //Clears any previously started intervals to prevent overlap
-    while (Date.now() - startTime < this.ms && this.pomRunning) {
+    while (Date.now() - this.startTime < this.ms && this.pomRunning) {
       await this.countSec();
       let seconds =
-        min * 60 - Math.floor((Date.now() - startTime + timeElapsed) / 1000);
+        min * 60 -
+        Math.floor((Date.now() - this.startTime + timeElapsed) / 1000);
       console.log(seconds);
       this.setState({ minutes: Math.floor((seconds / 60) % 60) });
       this.setState({ seconds: seconds % 60 });
     }
-    this.pomMs = Date.now() - startTime;
+    this.pomMs = Date.now() - this.startTime;
 
     if (this.pomRunning) {
       this.pomMs = 0;
