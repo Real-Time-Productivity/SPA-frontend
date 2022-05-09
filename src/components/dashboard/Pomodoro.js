@@ -41,7 +41,7 @@ export default class PomodoroComp extends Component {
       let seconds =
         min * 60 -
         Math.floor((Date.now() - this.startTime + timeElapsed) / 1000);
-      console.log(seconds);
+      console.log(this.startTime);
       this.setState({ minutes: Math.floor((seconds / 60) % 60) });
       this.setState({ seconds: seconds % 60 });
     }
